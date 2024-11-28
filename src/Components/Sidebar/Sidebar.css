@@ -1,71 +1,75 @@
-.side-bar{
-  display: flex;
+
+.sidebar {
+  min-height: 100vh;
+  display: inline-flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color:#f0f4f9;
-  box-sizing:border-box
+  background-color: #f0f4f9;
+  padding: 25px 15px
 }
 
-.side-bar img{
-  width: 20px;
+.sidebar img {
+  width: 20px
 }
-.top,.down{
-  padding-left: 1rem;
-  margin-left: 15px;;
-  padding:1rem;
+
+.sidebar .menu {
+  display: block;
+  margin-left: 10px;
+  cursor: pointer
 }
-.new-chart{
-       display: flex;
-      align-items: center;
-      margin-top: 50px;
-      gap: 10px;
-      border-radius: 15px;
-      border: -2.7px solid gray;
-      border-radius: 50%;
-      font-size: medium;
-      background: #e2e6eb;
-      padding: 6px;
-}
-.recent{
-  margin-top:1rem;
-display: flex;
-flex-direction: column;
-gap:10px;
-animation:fadeIn 1.5s;
-}
-.recent .recent-item{
-  display: flex;
+
+.sidebar .new-chat {
+  margin-top: 50px;
+  display: inline-flex;
   align-items: center;
-  gap:10px;
-  cursor: pointer;
+  gap: 10px;
+  padding: 10px 15px;
+  background-color: #e6eaf1;
+  border-radius: 50px;
+  font-size: 14px;
+  color: gray;
+  cursor: pointer
 }
-.down{
+
+.sidebar .recent {
   display: flex;
   flex-direction: column;
-  gap:10px;
+  animation: fadeIn 2s
 }
-.down .df{
+
+.sidebar .recent-title {
+  margin-top: 30px;
+  margin-bottom: 20px
+}
+
+.sidebar .recent-entry {
   display: flex;
-  align-items: center;
-  gap:10px;
+  align-items: start;
+  gap: 10px;
+  padding: 10px 40px 10px 10px;
+  border-radius: 50px;
+  color: #282828;
+  cursor: pointer
+}
+
+.sidebar .recent-entry:hover {
+  background-color: #e2e6eb
+}
+
+.sidebar .bottom {
+  display: flex;
+  flex-direction: column
+}
+
+.sidebar .bottom-item {
+  padding-right: 10px;
   cursor: pointer;
+  display: flex;
+
 }
-.side-bar .top .new-chart p{
-    border: 1px solid gray;
-    border: 2rem;
-}
-.recent .recent-item:hover{
-  background-color: #e2e6eb;
-}
-.down .df:hover{
-  background-color: #e2e6eb;
-  border-radius: 2rem
-}
-.new-chart-cursor{
-   cursor: pointer;
-}
-@media (max-width:600px) {
-   .side-bar{
-    display: none;
-   }
+
+@media (max-width: 600px) {
+  .sidebar {
+      display:none
+  }
 }

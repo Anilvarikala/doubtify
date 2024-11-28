@@ -12,13 +12,13 @@ const Sidebar = () => {
     else setshowSideBar("Show");
   }
   return (
-    <div className={`side-bar ${showSideBar}`}>
+    <div className={`sidebar ${showSideBar}`}>
       <div className="top">
-        <img src={assets.menu_icon} onClick={() => handleSideBar()} alt="" />
-        <div className="new-chart" onClick={() => setshowResult(false)}>
+        <img className="menu" src={assets.menu_icon} onClick={() => handleSideBar()} alt="" />
+        <div className="new-chat" onClick={() => setshowResult(false)}>
           <img src={assets.plus_icon} alt="" />
           {showSideBar === "Show" ? (
-            <p className="new-chart-cursor">New Chart</p>
+            <p>New Chart</p>
           ) : null}
         </div>
         {showSideBar === "Show" ? (
@@ -29,7 +29,7 @@ const Sidebar = () => {
               prevPrompt.map((item, index) => {
                 return (
                   <div
-                    className="recent-item"
+                    className="recent-entry"
                     key={index}
                     onClick={() => 
                      {setloading(true), onSent(item, true)}}
@@ -43,16 +43,16 @@ const Sidebar = () => {
         ) : null}
       </div>
 
-      <div className="down">
-        <div className="down-item df">
+      <div className="bottom">
+        <div className="bottom-item recent-entry">
           <img src={assets.question_icon} alt="" />
           {showSideBar === "Show" ? <p>Help</p> : null}
         </div>
-        <div className="down-item df">
+        <div className="bottom-item recent-entry">
           <img src={assets.history_icon} alt="" />
           {showSideBar === "Show" ? <p>History</p> : null}
         </div>
-        <div className="down-item df">
+        <div className="bottom-item recent-entry">
           <img src={assets.setting_icon} alt="" />
           {showSideBar === "Show" ? <p>Settings</p> : null}
         </div>
