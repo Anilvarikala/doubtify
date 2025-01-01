@@ -1,5 +1,3 @@
-
-
 // import { StrictMode } from "react";
 // import { createRoot } from "react-dom/client";
 // import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -36,15 +34,14 @@
 
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom"; // Import Navigate for redirection
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom"; // Import Navigate for redirection
 import "./index.css";
 import App from "./App.jsx";
-import Login from "./Components/Login.jsx";
-import Signup from "./Components/Signup.jsx";
-import PrivateRoute from "./Components/PrivateRoute.jsx";  // Import the PrivateRoute component
-
-// Check if user is authenticated from localStorage or context
-const isAuthenticated = localStorage.getItem("isAuthenticated");
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -52,35 +49,27 @@ createRoot(document.getElementById("root")).render(
       <Routes>
         {/* Public Routes */}
         {/* If the user is authenticated, redirect them to the main page */}
-        {!isAuthenticated && (
+        {/* {!isAuthenticated && (
           <>
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
           </>
-        )}
+        )} */}
 
         {/* If the user is authenticated, don't let them access login/signup */}
-        {isAuthenticated && (
+        {/* {isAuthenticated && (
           <>
             <Route path="/login" element={<Navigate to="/" replace />} />
             <Route path="/signup" element={<Navigate to="/" replace />} />
           </>
-        )}
+        )} */}
 
         {/* Private Route */}
-        <Route
-          path="/"
-          element={
-            <PrivateRoute>
-              <App />
-            </PrivateRoute>
-          }
-        />
+        <Route path="/" element={<App />} />
       </Routes>
     </Router>
   </StrictMode>
 );
-
 
 // import React from "react";
 // import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
