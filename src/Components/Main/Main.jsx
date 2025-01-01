@@ -903,6 +903,7 @@ const Main = () => {
   } = useContext(Context);
 
   // Authentication check
+  const images = [assets.code_icon,assets.compass_icon,assets.history_icon,assets.question_icon]
  
   // Initialize speech recognition
   useEffect(() => {
@@ -965,7 +966,7 @@ const Main = () => {
             ].map((text, index) => (
               <div className="card" key={index}>
                 <p>{text}</p>
-                <img src={assets[`card_icon_${index + 1}`]} alt="" />
+                <img src={images[index]} style={{backgroundColor:"#f0f4f9"}} alt="" />
               </div>
             ))}
           </div>
