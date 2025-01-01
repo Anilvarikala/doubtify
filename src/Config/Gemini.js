@@ -35,18 +35,17 @@
 // export default run;
 
 const apiKey = "AIzaSyBdVn6dUV3qFubIj2LCkjPybBdGwgb_LqQ"
-
 import {
   GoogleGenerativeAI,
   HarmCategory,
   HarmBlockThreshold,
 } from "@google/generative-ai";
 
-// const apiKey = process.env.GEMINI_API_KEY;
+
 const genAI = new GoogleGenerativeAI(apiKey);
 
 const model = genAI.getGenerativeModel({
-  model: "gemini-2.0-flash-exp",
+  model: "gemini-1.5-flash",
 });
 
 const generationConfig = {
@@ -66,6 +65,5 @@ async function run(UserInput) {
 
   const result = await chatSession.sendMessage(UserInput);
   return result.response.text();
+  // console.log(result.response.text());
 }
-
-export default run;

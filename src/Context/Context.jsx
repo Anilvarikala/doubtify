@@ -1,7 +1,7 @@
 import { createContext, useState } from "react";
 
 export const Context = createContext();
-import run from "../Config/Gemini";
+import run from "../Config/Gemini"
 const ContextProvider = (props) => {
   const [Input, setInput] = useState("");
   const [recentPrompt, setrecentPrompt] = useState("");

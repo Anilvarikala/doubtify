@@ -800,27 +800,27 @@ const Main = () => {
             </div>
           </div>
           <div className="cards">
-            <div className="card1">
+            <div className="card">
               <p>Suggest me the best movies in Telugu cinema.</p>
               <img src={assets.compass_icon} alt="" />
             </div>
-            <div className="card1">
+            <div className="card">
               <p>
                 Give me the history and evolution of artificial intelligence.
               </p>
               <img src={assets.bulb_icon} alt="" />
             </div>
-            <div className="card1">
+            <div className="card">
               <p>Prepare me today with my daily challenges.</p>
               <img src={assets.message_icon} alt="" />
             </div>
-            {/* <div className="card">
+             <div className="card">
               <p>
                 Let's do chatting for 4 hours daily to improve my writing
                 skills.
               </p>
               <img src={assets.code_icon} alt="" />
-            </div> */}
+            </div> 
           </div>
         </>
       ) : (
