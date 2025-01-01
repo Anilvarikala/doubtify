@@ -161,6 +161,46 @@
   gap: 10px
 }
 
+.user-icon-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.user-icon-container img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 10px;
+  z-index: 10;
+  width: 150px;
+ 
+}
+
+.dropdown-menu p {
+  font-size: 2rem;
+  margin: 0;
+  padding: 10px;
+  font-size: 17px;
+  color: #333333;
+  cursor: pointer;
+  text-align: center;
+}
+
+.dropdown-menu p:hover {
+  background-color: #f4f4f4;
+  border-radius: 6px;
+}
+
+
 .animated-bg {
   border-radius: 4px;
   border: none;
