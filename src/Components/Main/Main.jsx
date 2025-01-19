@@ -957,7 +957,7 @@ const Main = () => {
               <p>How can I help you today?</p>
             </div>
           </div>
-          <div className="cards">
+          {/* <div className="cards">
             {[
               "Suggest me the best movies in Telugu cinema.",
               "Give me the history and evolution of artificial intelligence.",
@@ -969,7 +969,7 @@ const Main = () => {
                 <img src={images[index]} style={{backgroundColor:"#f0f4f9"}} alt="" />
               </div>
             ))}
-          </div>
+          </div> */}
         </>
       ) : (
         <div className="result">
